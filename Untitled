@@ -1,0 +1,23 @@
+# services/ingestion/app/binance/stream_client.py
+
+import asyncio
+import json
+import websockets
+from app.config import BINANCE_WSS_BASE, DEFAULT_STREAMS
+
+async def connect_to_binance_stream(streams=None):
+    if streams is None:
+        streams = DEFAULT_STREAMS
+
+    stream_path = "/stream?streams=" + "/".join(streams)
+    uri = BINANCE_WSS_BASE + stream_path
+
+    async with websockets.connect(uri, ping_interval=20, ping_timeout=60) as websocket:
+        while True:
+            try:
+                message = await websocket.recv()
+                print("Received message:", message)
+            except Exception as e:i
+                print("WebSocket error:", e)
+                break
+
