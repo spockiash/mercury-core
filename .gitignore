@@ -1,0 +1,84 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+.env
+.venv
+*.egg-info/
+.eggs/
+dist/
+build/
+pip-wheel-metadata/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Poetry / Pipenv / virtualenv
+poetry.lock
+Pipfile.lock
+
+# mypy / Pyright / coverage
+.mypy_cache/
+.pyright/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Pylint / Ruff / Flake8 / Black
+*.log
+*.lint
+*.lint-report
+
+# === Go ===
+/bin/
+/build/
+/dist/
+*.exe
+*.test
+*.out
+*.mod
+*.sum
+*.log
+*.cache/
+vendor/
+
+# === Docker ===
+*.tar
+*.pid
+*.sock
+docker-compose.override.yml
+
+# === Editor / OS Files ===
+*.swp
+*.swo
+*.DS_Store
+*.idea/
+.vscode/
+*.bak
+*~
+*.orig
+
+# === Test / Debug / Temp Files ===
+*.tmp
+*.temp
+debug.log
+
+# === Secrets ===
+secrets.env
+*.key
+*.pem
+
+# === Deployment/CI ===
+*.crt
+*.csr
+*.pub
+certs/
+.env.*
+.envrc
+.env.local
+.env.production
+.env.development
+.env.test
